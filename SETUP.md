@@ -3,4 +3,4 @@
 1. NodeJS. Install from <https://nodejs.org/en/download/>  
 2. Git. For windows goto <https://git-scm.com/download/win>  
 3. Create an empty folder for the workshop and clone the github repo with 'git clone https://github.com/andekd/CypressWS.git'  
-
+   If you want to install Cypress from scratch see <https://docs.cypress.io/guides/getting-started/installing-cypress>

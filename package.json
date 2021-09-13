@@ -1,0 +1,26 @@
+{
+  "name": "cypressws",
+  "version": "1.0.0",
+  "description": "Workshop for getting started with Cypress",
+  "main": "index.js",
+  "scripts": {
+	"cyo": "cypress open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andekd/CypressWS.git"
+  },
+  "keywords": [
+    "Cypress"
+  ],
+  "author": "Anders Ekdahl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andekd/CypressWS/issues"
+  },
+  "homepage": "https://github.com/andekd/CypressWS#readme",
+  "devDependencies": {
+    "cypress": "^8.3.1"
+  }
+}
