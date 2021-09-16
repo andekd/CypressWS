@@ -4,7 +4,7 @@
   "description": "Workshop for getting started with Cypress",
   "main": "index.js",
   "scripts": {
-	  "cyo": "cypress open",
+    "cyo": "cypress open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
