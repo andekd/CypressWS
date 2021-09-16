@@ -7,4 +7,4 @@
    'git clone https://github.com/andekd/CypressWS.git .'  
    Dont forgett the dot  
    If you want to install Cypress from scratch see <https://docs.cypress.io/guides/getting-started/installing-cypress>
-5. In your git bash shell initialize node for our Cypress project with: 'npm install'
+5. In your git bash shell initialize our Cypress project with: 'npm install'
