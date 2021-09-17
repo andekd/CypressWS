@@ -102,3 +102,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Files created in workshop
+cypress/integration/sample_spec.js
