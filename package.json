@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/andekd/CypressWS#readme",
   "devDependencies": {
-    "cypress": "^8.4.0"
+    "cypress": "^8.5.0"
   }
 }
