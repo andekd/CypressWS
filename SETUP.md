@@ -11,3 +11,5 @@
    npm install
 6. Now check that you can start Cypress using command:  
    npm run cyo
+7. Cypress shows it's main working window. On the left side in the window you will see some example tests.  
+   The first of these 'todo.spec.js' (in folder 1-getting-started), we will walk thru in the workshop.
