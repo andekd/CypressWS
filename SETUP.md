@@ -5,7 +5,7 @@
 3. Editor/IDE. I will use Visual Studio Code, can be installed from <https://code.visualstudio.com/download>
 4. Create an empty folder for the workshop, open git bash and clone the github repo with:  
    git clone https://github.com/andekd/CypressWS.git .  
-   Dont forgett the dot  
+   Dont forgett space and dot at the end  
    If you want to install Cypress from scratch see <https://docs.cypress.io/guides/getting-started/installing-cypress>
 5. In your git bash shell initialize our Cypress project with:  
    npm install
@@ -13,3 +13,4 @@
    npm run cyo
 7. Cypress shows it's main working window. On the left side in the window you will see some example tests.  
    The first of these 'todo.spec.js' (in folder 1-getting-started), we will walk thru in the workshop.
+8. All links used in workshop are listed in <https://github.com/andekd/CypressWS/blob/main/workshop/thelinks.md>
