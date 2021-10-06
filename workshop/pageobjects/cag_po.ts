@@ -1,7 +1,7 @@
+
 export class CagPo {
     //Start with declaring attributes
     baseUrl: string;
-    //pageTitle: string;
 
     //Create constructor to initalize attributes
     constructor() {
@@ -12,6 +12,8 @@ export class CagPo {
     getBaseUrl(){
         return this.baseUrl;
     }
+
+    // Below we will define general functions that can be of use for all child pages
 
     // This will return undefined, so not very useful
     getPageTitle(){
@@ -36,18 +38,15 @@ export class CagPo {
             return cy.wrap(theTitle)
         })
     }
+
+    getTit(){
+        return cy.title()
+    }
     
 
-    //Create general functions for child pages
-    //Here it could be a good idea to create an abstraction for business areas to hold their common functions
+    // Not all pages have contact person, the pages that do will have to override his function
     getContactPerson(contactElement: string) {
-        //This page have no contact person
         return 'none';
-    }
-
-    //Create specific functions for this page
-    gotoSystemUtvecklingPage(){
-        //TBD
-    }
+    }   
 }
 
