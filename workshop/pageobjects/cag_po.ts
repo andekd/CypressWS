@@ -1,15 +1,11 @@
 export class CagPo {
     //Start with declaring attributes
     baseUrl: string;
-    pageTitle: string;
+    //pageTitle: string;
 
     //Create constructor to initalize attributes
     constructor() {
         this.baseUrl = 'https://www.cag.se/';
-        //this.pageTitle = cy.title();
-        cy.title().then((theTitle)=>{
-            this.pageTitle = theTitle;
-        })
     }
 
     //Here a class often have getters and setters (Java), but we skip setters for now
@@ -17,9 +13,30 @@ export class CagPo {
         return this.baseUrl;
     }
 
+    // This will return undefined, so not very useful
     getPageTitle(){
-        return this.pageTitle;
+        let myTitle: string
+        cy.title().then((theTitle)=>{
+            myTitle = theTitle
+            cy.log('title: ' + theTitle)
+        })
+        return myTitle;
     }
+
+    // Here we do the test/assertion in the PO
+    checkPageTitle(correctTitle: string){
+        cy.title().then((theTitle)=>{
+            expect(theTitle).to.equal(correctTitle)
+        })
+    }
+
+    // Here we use cy.wrap to return a chainable so that the promise can be resolved in calling function (in test spec)
+    getPageWrappedTitle(){
+        return cy.title().then((theTitle)=>{
+            return cy.wrap(theTitle)
+        })
+    }
+    
 
     //Create general functions for child pages
     //Here it could be a good idea to create an abstraction for business areas to hold their common functions
@@ -28,6 +45,9 @@ export class CagPo {
         return 'none';
     }
 
-
+    //Create specific functions for this page
+    gotoSystemUtvecklingPage(){
+        //TBD
+    }
 }
 
