@@ -2,10 +2,12 @@
 export class CagPo {
     //Start with declaring attributes
     baseUrl: string;
+    uri: string;
 
     //Create constructor to initalize attributes
     constructor() {
         this.baseUrl = 'https://www.cag.se/';
+        this.uri = '';
     }
 
     //Here a class often have getters and setters (Java), but we skip setters for now
@@ -35,6 +37,10 @@ export class CagPo {
         cy.title().then((theTitle) => {
             expect(theTitle).to.equal(correctTitle)
         })
+    }
+
+    getContactPerson(){
+        return cy.wrap('none')
     }
 }
 

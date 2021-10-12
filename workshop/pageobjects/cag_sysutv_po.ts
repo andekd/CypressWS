@@ -4,7 +4,7 @@ import { CagJavaPo } from './cag_java_po'
 import { CagTestautoPo } from './cag_testauto_po'
 
 export class CagSysUtvPo extends CagPo {
-    uri: string = 'systemutveckling'
+    uri: string = '/systemutveckling'
 
     constructor() {
         super(); //We want parent class constructor to run
