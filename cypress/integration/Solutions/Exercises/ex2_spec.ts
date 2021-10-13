@@ -121,7 +121,7 @@ describe('Check how PageObjects will work', () => {
             cagtestautopage.getContactPerson().then((theContact) => {
                 cy.log('testautopage contact person: ' + theContact)
                 expect(theContact).to.contain(testautocontact)
-           })
+            })
         })
     })
 })

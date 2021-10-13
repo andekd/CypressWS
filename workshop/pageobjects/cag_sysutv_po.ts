@@ -3,6 +3,19 @@ import { CagIntPo } from './cag_int_po'
 import { CagJavaPo } from './cag_java_po'
 import { CagTestautoPo } from './cag_testauto_po'
 
+export enum SysUtvPages{
+    Integration,
+    Java,
+    Testauto
+}
+
+export class CagSysUtvContacts {
+    page: string;
+    name: string;
+    phone: string;
+    email: string;
+}
+
 export class CagSysUtvPo extends CagPo {
     uri: string = '/systemutveckling'
 
@@ -35,4 +48,18 @@ export class CagSysUtvPo extends CagPo {
             return new CagTestautoPo()
         })
     }
+   
+    gotoPage(thePage: SysUtvPages) {
+        switch(thePage) {
+            case SysUtvPages.Integration: {
+                this.gotoIntegrationPage()
+            }
+            case SysUtvPages.Java: {
+                this.gotoJavaPage()
+            }
+            case SysUtvPages.Testauto: {
+                this.gotoTestautoPage()
+            }
+        }
+    }    
 }
