@@ -6,6 +6,7 @@ export class CagHomePo extends CagPo {
     constructor() {
         super(); //We want parent class constructor to run
     }
+
     //Create specific functions for this po
     gotoSystemUtvecklingPage() {
         let sysutvBtn = '.eut-mobile-row-hide > .eut-container > .eut-row > .eut-column > .eut-column-wrapper > .block-image-right > .button'
@@ -13,4 +14,6 @@ export class CagHomePo extends CagPo {
             return new CagSysUtvPo()
         })
     }
+
+    // Below we will probably implement goto page for the remaing BA's
 }

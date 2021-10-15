@@ -23,6 +23,7 @@ export class CagSysUtvPo extends CagPo {
         super(); //We want parent class constructor to run
     }
 
+    // Override function in parent class
     getContactPerson(){
         return cy.get('#systemutveckling-bottom > .eut-container > .eut-row > :nth-child(1) > .eut-column-wrapper > .eut-element > p')
         .invoke('text')
@@ -49,6 +50,7 @@ export class CagSysUtvPo extends CagPo {
         })
     }
    
+    // General goto function, good to have when creating data driven tests
     gotoPage(thePage: SysUtvPages) {
         switch(thePage) {
             case SysUtvPages.Integration: {
