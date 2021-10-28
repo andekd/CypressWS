@@ -3,7 +3,6 @@ describe('Check swag website', () => {
   let secondTotal: number = 0.0
 
   it('login and add items to cart', () => {
-    //cy.visit('https://www.saucedemo.com/', { onBeforeLoad: (win) => { win.sessionStorage.clear() } })
     cy.visit('https://www.saucedemo.com/')
       .get('[data-test=username]').type('standard_user')
       .get('[data-test=password]').type('secret_sauce')
@@ -19,15 +18,16 @@ describe('Check swag website', () => {
       .get('[data-test=lastName]').type('kula')
       .get('[data-test=postalCode]').type('12345')
       .get('[data-test=continue]').click()
-    //get total sum
-    cy.get('.summary_total_label').then((elem) => {
-      let totalStr: string = elem.text()
-      cy.log(totalStr)
-      let sumAsStr = totalStr.substring(8)
-      cy.log(sumAsStr)
-      firstTotal = parseFloat(sumAsStr)
-      cy.log(firstTotal.toString())
-    })
+
+      //get total sum
+      .get('.summary_total_label').then((elem) => {
+        let totalStr: string = elem.text()
+        cy.log(totalStr)
+        let sumAsStr = totalStr.substring(8)
+        cy.log(sumAsStr)
+        firstTotal = parseFloat(sumAsStr)
+        cy.log(firstTotal.toString())
+      })
 
     //Add another item
     cy.get('.shopping_cart_link').click()
@@ -53,10 +53,9 @@ describe('Check swag website', () => {
       cy.log(firstTotal.toString())
     })
     
+    cy.log(secondTotal.toString())
+    cy.log(firstTotal.toString())
     //expect(secondTotal).to.be.greaterThan(firstTotal)
-    //cy.log(secondTotal.toString())
-    //cy.log(firstTotal.toString())
-
   })
 })
 

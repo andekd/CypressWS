@@ -20,7 +20,7 @@ describe('Check how PageObjects will work', () => {
 
     beforeEach(() => {
         cy.visit(cagpage.getBaseUrl())
-            .get('#cookie-agree').click()
+            .get('#cookie-agree').click() // This migth be good to have as a function in parent class
     })
 
     it('Check title of home page', () => {
