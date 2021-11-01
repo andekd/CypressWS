@@ -58,25 +58,18 @@ describe('Check swag website', function () {
       goBackToShop()
     })
 
-    it('Buy second item and check that total price is higher', function () {
+    it('Buy second item and check that total price is higher', function () { // !!! Observe that we need to have 'old' function call here !!!!!!
       // Buy another item
       buyItem('fleecejacket')
       gotoCheckout()
       getTotalPrice('twoItemsTotal').then(function () {
-        cy.log('one item: ' + this.oneItemTotal)
-        cy.log('two items: ' + this.twoItemsTotal)
+        let oneItemAsNumber: number = parseFloat(this.oneItemTotal.substring(8))
+        let twoItemsAsNumber: number = parseFloat(this.twoItemsTotal.substring(8))
+        cy.log('one item: ' + oneItemAsNumber)
+        cy.log('two items: ' + twoItemsAsNumber)
+        expect(twoItemsAsNumber).to.be.greaterThan(oneItemAsNumber)
       })
-      /*
-      cy.get('.summary_total_label').invoke('text').as('xx').then(function (theText) {
-        cy.log('thetext: ' + theText)
-      }).then(function () {
-        cy.log('thetext: ' + this.xx)
-      })
-      */
     })
   })
 })
-
-
-
 

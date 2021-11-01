@@ -4,6 +4,7 @@ describe('Check swag website', () => {
 
   it('login and add items to cart', () => {
     cy.visit('https://www.saucedemo.com/')
+      // Log in
       .get('[data-test=username]').type('standard_user')
       .get('[data-test=password]').type('secret_sauce')
       .get('[data-test=login-button]').click()
