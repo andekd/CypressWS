@@ -19,11 +19,6 @@ describe('Check contacts at CAG', () => {
         expect($contact).to.contain('David Caro')
       })
     })
-
-    it('check types in ts', () => {
-      xx = 1
-    })
-
   })
 
  
