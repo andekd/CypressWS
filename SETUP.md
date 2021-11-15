@@ -8,7 +8,7 @@
    Dont forgett space and dot at the end  
    If you want to install Cypress from scratch see <https://docs.cypress.io/guides/getting-started/installing-cypress>  
 5. In your git bash shell initialize our Cypress project with:  
-   npm install --save-dev
+   npm install --save-dev  
    If you get vulnerability warning follow the instruction you get (npm audit fix)  
 6. Now check that you can start Cypress using command:  
    npm run cyo  
